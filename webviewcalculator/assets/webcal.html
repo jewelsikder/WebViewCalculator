@@ -1,0 +1,47 @@
+
+<html>
+<head>
+    <script type="text/javascript">
+    
+        function addNum(num) 
+        {
+            document.frm.res.value+=num;
+        }
+        function addOperator(opr) {
+          
+            document.frm.res.value+=opr;
+        }
+        function getResult() {
+            var display=document.frm.res.value;
+        	var result=Android.getResult(display);
+        	display.value=result;
+        }
+    </script>
+</head>
+<body>
+	<form name="frm">
+    <input type="text" value="" id="res" name="res" >
+    <br>
+    <input type="button" value="1" onclick="addNum(1)">
+    <input type="button" value="2" onclick="addNum(2)">
+    <input type="button" value="3" onclick="addNum(3)">
+    <input type="button" value="+" onclick="addOperator('+')">
+    <br>
+    <input type="button" value="4" onclick="addNum(4)">
+    <input type="button" value="5" onclick="addNum(5)">
+    <input type="button" value="6" onclick="addNum(6)">
+    <input type="button" value="-" onclick="addOperator('-')">
+    <br>
+    <input type="button" value="7" onclick="addNum(7)">
+    <input type="button" value="8" onclick="addNum(8)">
+    <input type="button" value="9" onclick="addNum(9)">
+    <input type="button" value="*" onclick="addOperator('*')">
+    <br>
+    <input type="button" value="." onclick="addNum('.')">
+    <input type="button" value="0" onclick="addNum(0)">
+    <input type="button" value="=" onclick="getResult()">
+    <input type="button" value="/" onclick="addOperator('/')">
+    <br>
+    </form>
+
+</body></html>
